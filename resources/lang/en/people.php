@@ -14,6 +14,6 @@ return [
     'created_at' => 'Created At',
     'updated_at' => 'Updated At',
 //Relations
-    'assistances' => 'Assistances',
+    'attendees' => 'Attendees',
 //Custom
 ];
