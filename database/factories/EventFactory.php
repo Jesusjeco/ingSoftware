@@ -13,6 +13,6 @@ $factory->define(Event::class, function (Faker $faker) {
         'description' => $faker->text,
         'address' => $faker->text,
         'date' => $faker->word,
-        //assistances HasMany Attendee id
+        //attendees HasMany Attendee id
     ];
 });

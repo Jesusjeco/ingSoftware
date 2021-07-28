@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Event extends Model
+class Activity extends Model
 {
-    protected $table = 'events';
+    protected $table = 'activities';
 
     protected $primaryKey = 'id';
 
@@ -15,11 +15,10 @@ class Event extends Model
     protected $guarded = [];
 
     //*** Relationships */
-    //Event has many asisstances
+    //An activity is within many privileges
     
-    public function attendees()
+    public function privileges()
     {
-        return $this->hasMany(Attendee::class);
+        return $this->hasMany(Privilege::class);
     }
-    
 }

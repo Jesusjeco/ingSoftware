@@ -21,3 +21,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::apiResource('people', 'API\PersonController');
 Route::apiResource('events', 'API\EventController');
 Route::apiResource('attendees', 'API\AttendeeController');
+Route::apiResource('roles', 'API\RoleController');
+Route::apiResource('activities', 'API\ActivityController');
+Route::apiResource('privileges', 'API\PrivilegeController');

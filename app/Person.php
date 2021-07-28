@@ -28,7 +28,7 @@ class Person extends Model
     /***** Relationships */
     //A person assisted to many events
     
-    public function assistances()
+    public function attendees()
     {
         return $this->hasMany(Attendee::class);
     }

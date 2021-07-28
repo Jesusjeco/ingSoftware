@@ -15,6 +15,6 @@ $factory->define(Person::class, function (Faker $faker) {
         'address' => $faker->optional()->text,
         'number' => $faker->optional()->text,
         'email' => $faker->optional()->safeEmail,
-        //assistances HasMany Attendee id
+        //attendees HasMany Attendee id
     ];
 });

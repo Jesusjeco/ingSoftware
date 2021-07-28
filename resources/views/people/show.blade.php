@@ -40,7 +40,7 @@
     <div class="card mb-4">
 
                         <div class="card-header">
-        <h2>Assistances</h2>
+        <h2>Attendees</h2>
         </div>
         <div class="card-body">
             <div>
@@ -54,7 +54,7 @@
                                                                                                                                                                                                                                                                                             </tr>
                 </thead>
                 <tbody>
-                    @foreach($person->assistances as $assistance)
+                    @foreach($person->attendees as $attendee)
                     <tr>
                         <td>
                         <a href="{{route('attendees.show',['attendee'=>$attendee] )}}">Show</a>

@@ -20,3 +20,6 @@ Route::get('/', function () {
 Route::resource('people', 'PersonController');
 Route::resource('events', 'EventController');
 Route::resource('attendees', 'AttendeeController');
+Route::resource('roles', 'RoleController');
+Route::resource('activities', 'ActivityController');
+Route::resource('privileges', 'PrivilegeController');

@@ -1,17 +1,15 @@
 <?php
 
 return [
-    'singular' => 'Event',
-    'plural' => 'Events',
+    'singular' => 'Role',
+    'plural' => 'Roles',
 //Fields
     'id' => 'Id',
     'name' => 'Name',
     'description' => 'Description',
-    'address' => 'Address',
-    'date' => 'Date',
     'created_at' => 'Created At',
     'updated_at' => 'Updated At',
 //Relations
-    'attendees' => 'Attendees',
+    'privileges' => 'Privileges',
 //Custom
 ];
