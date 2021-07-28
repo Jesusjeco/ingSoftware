@@ -23,42 +23,7 @@
 
     <div class="card mb-4">
 
-                        <div class="card-header">
-        <h2>Privileges</h2>
-        </div>
-        <div class="card-body">
-            <div>
-                <a href="{{route('privileges.create')}}">New</a>
-            </div>
-
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>&nbsp;</th>
-                                                                                                                                                                                                                                                                                                                                                                                                                                            </tr>
-                </thead>
-                <tbody>
-                    @foreach($activity->privileges as $privilege)
-                    <tr>
-                        <td>
-                        <a href="{{route('privileges.show',['privilege'=>$privilege] )}}">Show</a>
-                        <a href="{{route('privileges.edit',['privilege'=>$privilege] )}}">Edit</a>
-                        <a href="javascript:void(0)" onclick="event.preventDefault();
-                        document.getElementById('delete-privilege-{{$privilege->id}}').submit();">
-                            Delete
-                        </a>
-                        <form id="delete-privilege-{{$privilege->id}}" action="{{route('privileges.destroy',['privilege'=>$privilege])}}" method="POST" style="display: none;">
-                            @csrf
-                            @method('DELETE')
-                        </form>
-                        </td>
-                                                                                                                                                                                                                                                                                                                                                                                                                                            </tr>
-
-                    @endforeach
-                </tbody>
-            </table>
-        </div>
-                
+        
     </div>
 
 

@@ -20,7 +20,7 @@
     <form action="{{route('people.update',['person'=>$person->id])}}" method="POST" novalidate>
         @csrf
         @method('PUT')
-                        
+        
 
                                         <div class="form-group">
             <label for="name">Name</label>

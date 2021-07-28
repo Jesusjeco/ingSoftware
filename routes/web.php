@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,13 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::resource('people', 'PersonController');
 Route::resource('events', 'EventController');
 Route::resource('attendees', 'AttendeeController');
 Route::resource('roles', 'RoleController');
 Route::resource('activities', 'ActivityController');
 Route::resource('privileges', 'PrivilegeController');
+
+Route::get('/', function () {
+    return redirect(action('EventController@index'));
+});
+
+Route::get('create_attendee', 'AttendeeController@create_attendee');
+Route::post('store_attendee', 'AttendeeController@store_attendee');

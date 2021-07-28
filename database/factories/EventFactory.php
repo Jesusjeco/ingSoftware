@@ -4,7 +4,6 @@
 
 use App\Event;
 use Faker\Generator as Faker;
-use App\Attendee;
 
 
 $factory->define(Event::class, function (Faker $faker) {
@@ -13,6 +12,5 @@ $factory->define(Event::class, function (Faker $faker) {
         'description' => $faker->text,
         'address' => $faker->text,
         'date' => $faker->word,
-        //attendees HasMany Attendee id
     ];
 });

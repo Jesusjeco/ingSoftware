@@ -4,7 +4,7 @@
         <div class="card">
 
             <div class="card-header">
-                <h1> Person Create </h1>
+                <h1> Create attendee + event </h1>
             </div>
             <div class="card-body">
 
@@ -15,8 +15,17 @@
                         @endforeach
                     </ul>
                 @endif
-                <form action="{{ route('people.store') }}" method="POST" novalidate>
+                <form action="{{ action('AttendeeController@store_attendee') }}" method="POST" novalidate>
                     @csrf
+                    <div class="form-group">
+                        <label for="event_id">Event</label>
+                        <select class="form-control" name="event_id" id="event_id">
+                            @foreach (\App\Event::all() ?? [] as $event)
+                                <option value="{{ $event->id }}">
+                                    {{ $event->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
 
                     <div class="form-group">
                         <label for="name">Name</label>

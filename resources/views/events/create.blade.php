@@ -15,7 +15,7 @@
             @endforeach
         </ul> @endif <form action="{{route('events.store')}}" method="POST" novalidate>
         @csrf
-                        
+        
                                         <div class="form-group">
             <label for="name">Name</label>
                         <input class="form-control String"  type="text"  name="name" id="name" value="{{old('name')}}"             maxlength="255"
