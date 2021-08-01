@@ -10,6 +10,7 @@ return [
     'created_at' => 'Created At',
     'updated_at' => 'Updated At',
 //Relations
+    'person' => 'Person',
     'event' => 'Event',
 //Custom
 ];

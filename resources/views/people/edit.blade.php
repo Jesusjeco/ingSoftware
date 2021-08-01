@@ -20,7 +20,7 @@
     <form action="{{route('people.update',['person'=>$person->id])}}" method="POST" novalidate>
         @csrf
         @method('PUT')
-        
+                        
 
                                         <div class="form-group">
             <label for="name">Name</label>
@@ -43,7 +43,8 @@
                                 <div class="form-group">
             <label for="birthday">Birthday</label>
                     <input class="form-control Date"  type="date"  name="birthday" id="birthday" value="{{old('birthday',$person->birthday)}}"
-                                    >
+                                    required="required"
+                        >
                     @if($errors->has('birthday'))
             <p class="text-danger">{{$errors->first('birthday')}}</p>
             @endif

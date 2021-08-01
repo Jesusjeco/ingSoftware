@@ -20,7 +20,7 @@
     <form action="{{route('events.update',['event'=>$event->id])}}" method="POST" novalidate>
         @csrf
         @method('PUT')
-        
+                        
 
                                         <div class="form-group">
             <label for="name">Name</label>
@@ -34,8 +34,7 @@
                                 <div class="form-group">
             <label for="description">Description</label>
                     <input class="form-control String"  type="text"  name="description" id="description" value="{{old('description',$event->description)}}"
-                                    required="required"
-                        >
+                                    >
                     @if($errors->has('description'))
             <p class="text-danger">{{$errors->first('description')}}</p>
             @endif
@@ -43,8 +42,7 @@
                                 <div class="form-group">
             <label for="address">Address</label>
                     <input class="form-control String"  type="text"  name="address" id="address" value="{{old('address',$event->address)}}"
-                                    required="required"
-                        >
+                                    >
                     @if($errors->has('address'))
             <p class="text-danger">{{$errors->first('address')}}</p>
             @endif
