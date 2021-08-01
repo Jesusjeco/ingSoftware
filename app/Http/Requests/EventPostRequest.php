@@ -28,10 +28,10 @@ class EventPostRequest extends FormRequest
                 'required',
             ],
             'description' => [
-                'required',
+                'present',
             ],
             'address' => [
-                'required',
+                'present',
             ],
             'date' => [
                 'required',

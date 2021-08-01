@@ -31,7 +31,7 @@ class PersonPostRequest extends FormRequest
                 'required',
             ],
             'birthday' => [
-                'present',
+                'required',
             ],
             'address' => [
                 'present',

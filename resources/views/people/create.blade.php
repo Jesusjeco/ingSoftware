@@ -36,7 +36,8 @@
         </div>
                                 <div class="form-group">
             <label for="birthday">Birthday</label>
-                        <input class="form-control Date"  type="date"  name="birthday" id="birthday" value="{{old('birthday')}}"                         >
+                        <input class="form-control Date"  type="date"  name="birthday" id="birthday" value="{{old('birthday')}}"                         required="required"
+                        >
                         @if($errors->has('birthday'))
             <p class="text-danger">{{$errors->first('birthday')}}</p>
             @endif
